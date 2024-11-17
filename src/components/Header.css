@@ -1,0 +1,101 @@
+/* Header.css */
+/* Header Container */
+.header {
+    background: linear-gradient(45deg, #fca199, #f0a6ca); /* Gradient from pink to light peach */
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logoicon {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logoicon:hover {
+    transform: rotate(360deg);
+}
+
+/* Navigation Styling */
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.navlink {
+    color: #718096;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, padding-bottom 0.3s ease;
+}
+
+.navlink:hover {
+    color: var(--primary-color);
+    padding-bottom: 10px;
+}
+
+/* Hover underline effect for links */
+.navlink::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    left: 50%;
+    bottom: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navlink:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .navlink {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+}

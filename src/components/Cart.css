@@ -1,0 +1,26 @@
+/* Cart.css */
+.cart {
+    padding: 30px;
+    text-align: center;
+}
+
+.cart h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.cart button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color var(--transition-speed);
+}
+
+.cart button:hover {
+    background-color: #e55e52;
+}

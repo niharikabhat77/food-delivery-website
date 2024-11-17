@@ -1,0 +1,115 @@
+/* CategoryList.css */
+/* Cake Categories Section */
+.categories {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(45deg, #ffb6b9, #fae3d9); /* Gradient background */
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Heading */
+.categories h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1s ease-out;
+}
+
+/* Hover effect on Heading */
+.categories h2:hover {
+    color: #ff6f61; /* Change color on hover */
+    text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Category List */
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.category-list button {
+    background: linear-gradient(145deg, #ffffff, #f1f1f1); /* Gradient background */
+    padding: 18px 35px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    border: 2px solid #ff6f61;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+.category-list button:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    transform: translateY(-5px); /* Move up effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-list button:focus {
+    outline: none;
+    border: 2px solid #ff6f61;
+    transform: scale(1.05); /* Slight zoom effect on focus */
+}
+
+/* Hover effect when mouse enters button */
+.category-list button:active {
+    transform: scale(0.98); /* Click effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .categories h2 {
+        font-size: 2.4rem;
+    }
+
+    .category-list button {
+        padding: 15px 25px;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .categories h2 {
+        font-size: 2rem;
+    }
+
+    .category-list button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

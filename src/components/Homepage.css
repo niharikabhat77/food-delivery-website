@@ -1,0 +1,93 @@
+/* Home.css */
+:root {
+    --primary-color: #f5a623;
+    --secondary-color: #ff5c8d;
+    --bg-color: #f9f9f9;
+    --text-color: #4d4f51;
+    --transition-speed: 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.hero {
+    height: 100vh;
+    background: url('top-view-delicious-cake-arrangement.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    z-index: 2;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #f2f2f2;
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 2;
+}
+
+.btn img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.btn img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+    }
+
+    .btn img {
+        width: 100px;
+        height: 100px;
+    }
+}

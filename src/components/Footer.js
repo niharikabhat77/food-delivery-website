@@ -5,7 +5,7 @@ import './Footer.css';
 function Footer() {
     return (
         <footer className="footer">
-            <p>&copy; 2023 Cake Shop. All rights reserved.</p>
+            <p>&copy; 2023 CRAVE. All rights reserved.</p>
             <div>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                     Facebook

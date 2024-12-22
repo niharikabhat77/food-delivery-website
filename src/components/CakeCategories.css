@@ -1,115 +1,184 @@
-/* CategoryList.css */
-/* Cake Categories Section */
-.categories {
-    padding: 60px 20px;
+/* General Styles */
+.food-menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+h1 {
     text-align: center;
-    background: linear-gradient(45deg, #ffb6b9, #fae3d9); /* Gradient background */
-    border-radius: 20px;
-    margin-top: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-out;
-}
-
-/* Heading */
-.categories h2 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #fff;
-    margin-bottom: 40px;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    animation: slideIn 1s ease-out;
-}
-
-/* Hover effect on Heading */
-.categories h2:hover {
-    color: #ff6f61; /* Change color on hover */
-    text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.5);
-}
-
-/* Category List */
-.category-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.category-list button {
-    background: linear-gradient(145deg, #ffffff, #f1f1f1); /* Gradient background */
-    padding: 18px 35px;
-    font-size: 1.3rem;
-    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 2rem;
     color: #333;
-    border: 2px solid #ff6f61;
-    border-radius: 12px;
+}
+
+/* Filters Section */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.category-filter ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.category-filter li {
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.9rem;
 }
 
-.category-list button:hover {
+.category-filter li.active,
+.category-filter li:hover {
     background-color: #ff6f61;
-    color: #fff;
-    transform: translateY(-5px); /* Move up effect */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 
-.category-list button:focus {
-    outline: none;
-    border: 2px solid #ff6f61;
-    transform: scale(1.05); /* Slight zoom effect on focus */
+.dietary-filter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-/* Hover effect when mouse enters button */
-.category-list button:active {
-    transform: scale(0.98); /* Click effect */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+.dietary-filter label {
+    cursor: pointer;
+    font-size: 0.9rem;
 }
 
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-    .categories h2 {
-        font-size: 2.4rem;
-    }
-
-    .category-list button {
-        padding: 15px 25px;
-        font-size: 1.1rem;
-    }
+.dietary-filter input {
+    margin-right: 5px;
 }
 
-@media screen and (max-width: 480px) {
-    .categories h2 {
-        font-size: 2rem;
-    }
-
-    .category-list button {
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.menu-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-info {
+    padding: 15px;
+}
+
+.item-info h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.item-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.item-info .price {
+    color: #ff6f61;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Hover Effects */
+.hover-actions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-item:hover .hover-actions {
+    display: flex;
+}
+
+.hover-actions button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.hover-actions button:hover {
+    background-color: #e65a50;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination button.active,
+.pagination button:hover {
+    background-color: #ff6f61;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        gap: 15px;
     }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
+
+    .dietary-filter {
+        justify-content: center;
+    }
+
+    .menu-item img {
+        height: 120px;
+    }
+
+    .hover-actions button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
     }
 }

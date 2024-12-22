@@ -1,19 +1,65 @@
-/* About.css */
-.about {
+.sign-in {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
     text-align: center;
-    padding: 30px;
-    background-color: #e0e8ec;
 }
 
-.about h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+h2 {
     margin-bottom: 20px;
+    color: #333;
 }
 
-.about p {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: auto;
+p {
+    margin-bottom: 20px;
+    color: #555;
 }
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e65a50;
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: green;
+}
+

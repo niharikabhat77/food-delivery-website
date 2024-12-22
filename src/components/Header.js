@@ -12,13 +12,14 @@ function Header() {
                     alt="Cake Shop Logo"
                     className="logoicon"
                 />
-                <h2>Niharika's Cake Shop</h2>
+                <h2>CRAVE</h2>
             </Link>
             <nav className="nav">
                 <Link to="/" className="navlink">Home</Link>
-                <Link to="/categories" className="navlink">Categories</Link>
-                <Link to="/cart" className="navlink">Cart</Link>
-                <Link to="/about" className="navlink">About Us</Link>
+                <Link to="/Categories" className="navlink">Menu</Link>
+                <Link to="/cart" className="navlink">0rder and Cart</Link>
+                <Link to="/about" className="navlink"> Contact & About Us</Link>
+                <Link to="/contact" className="navlink"> Sign in</Link>
             </nav>
         </header>
     );
